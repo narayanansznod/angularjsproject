@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+
+    <script src="https://unpkg.com/angularjs-highcharts@0.3.0/dist/angular-highcharts.js"></script>
+
+</head>
+
+<body>
+    <section ng-app='charts'>
+        <div ng-controller="Ctrl">
+            <highchart chart='example_chart'></highchart>
+        </div>
+    </section>
+    <!-- <div id="container" style="height: 400px; min-width: 310px"></div> -->
+    <script>
+        /* highcharts + angularjs + live random data example */
+
+        function get_chart() {
+            var options = {
+                chart: {
+                    type: 'column',
+                    renderTo: 'container'
+                },
+                title: {
+                    text: 'Twitter Data'
+                },
+                xAxis: {
+                    categories: []
+                },
+
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            style: {
+                                textShadow: '0 0 3px black'
+                            }
+                        },
+                        point: {
+                            events: {
+                                click: function() {
+                                    alert('Category: ' + this.category + ', value: ' + this.y);
+                                }
+                            }
+                        }
+                    }
+
+                },
+
+                series: []
+
+            };
+            $.getJSON("data.json", function(json) {
+                options.xAxis.categories = json[0]['data'];
+                options.series[0] = json[1];
+                options.series[1] = json[2];
+                chart = new Highcharts.Chart(options);
+            });
+        }
+        get_chart();
+
+        var app = angular.module('charts', []);
+
+        app.directive('highchart', [function() {
+            return {
+                restrict: 'E',
+                template: '<div></div>',
+                replace: true,
+                link: function(scope, element, attrs) {
+
+                    scope.$watch(attrs.chart, function() {
+
+                        if (!attrs.chart) return;
+
+                        var chart = scope.$eval(attrs.chart);
+
+                        angular.element(element).highcharts(chart);
+                    });
+
+                }
+            }
+        }]);
+
+        function Ctrl($scope) {
+            $scope.example_chart = get_chart();
+        }
+    </script>
+</body>
+
+</html>

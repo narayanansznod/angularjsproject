@@ -1,0 +1,43 @@
+{
+	"records": [{
+		"Name": "Alfreds Futterkiste",
+		"City": "Berlin",
+		"Country": "German",
+		"logoLocation": "images/1.png"
+	}, {
+		"Name": "Ana Trujillo Emparedados y helados",
+		"City": "México D.F.",
+		"Country": "Mexico",
+		"logoLocation": "images/2.png"
+	}, {
+		"Name": "Antonio Moreno Taquería",
+		"City": "México D.F.",
+		"Country": "Mexico",
+		"logoLocation": "images/3.png"
+	}, {	
+		"Name": "Around the Horn",
+		"City": "London",
+		"Country": "UK",
+		"logoLocation": "images/4.png"
+	}, {
+		"Name": "B's Beverages",
+		"City": "London",
+		"Country": "UK",
+		"logoLocation": "images/5.png"
+	}, {
+		"Name": "Berglunds snabbköp",
+		"City": "Luleå",
+		"Country": "Sweden",
+		"logoLocation": "images/6.png"
+	}, {
+		"Name": "Blauer See Delikatessen",
+		"City": "Mannheim",
+		"Country": "Germany",
+		"logoLocation": "images/7.png"
+	}, {
+		"Name": "Blondel père et fils",
+		"City": "Strasbourg",
+		"Country": "France",
+		"logoLocation": "images/8.png"
+	}]
+}

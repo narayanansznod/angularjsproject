@@ -1,0 +1,39 @@
+{
+  "name": "chart",
+  "version": "1.0.0",
+  "description": "Angular chart ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kishorenagalingam/frontend-test-r.git"
+  },
+  "keywords": [
+    "Angular",
+    "chart",
+    "front"
+  ],
+  "author": "Kishore N",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kishorenagalingam/frontend-test-r/issues"
+  },
+  "homepage": "https://github.com/kishorenagalingam/frontend-test-r#readme",
+  "dependencies": {
+    "angular-chart.js": "^1.1.1",
+    "angular-masonry": "^0.17.0",
+    "angular-route": "^1.6.6",
+    "chart.js": "^2.7.1",
+    "highcharts": "^6.0.3",
+    "less": "^2.7.3",
+    "tc-angular-chartjs": "^2.1.4"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "jit-grunt": "^0.10.0"
+  }
+}

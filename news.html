@@ -1,0 +1,25 @@
+<div class="inner-section" ng-controller="newsController">
+    <div class="list-wrap" masonry="">
+        <div class="list-box grid" ng-repeat="item in newsItem">
+            <header class="clearfix">
+                <span class="title">{{item.title}}</span>
+                <span class="date">{{item.date}}</span>
+                <p class="caption">
+                    {{item.caption}}
+                </p>
+            </header>
+            <section>
+
+                <img ng-src="{{item.newsImg}}">
+                <p class="desc">{{item.desc}}</p>
+
+            </section>
+            <div class="foot clearfix">
+                <div class="brief"><span class="fa fa-suitcase"></span></div>
+                <div class="like"><span class="fa fa-thumbs-up"></span><span>{{item.thumbs}}</span></div>
+                <div class="share"><span class="fa fa-reply"></span></div>
+            </div>
+        </div>
+    </div>
+
+</div>
